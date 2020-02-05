@@ -1,0 +1,62 @@
+* {
+    margin:0;
+}
+
+body {
+    background: url("../images/bg.jpg") no-repeat center center/cover; /* Не повторяем картинку, центры по вертикали и горизонтали, cover - растянуть*/
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+}
+
+.container {
+    border:1px solid;
+    height: 1200px;
+    width: 1080px;
+    margin: 0 auto; /*внешние поля сверху и снизу 0, а побокам auto. Container стал посредине*/
+}
+
+header {
+    border: 1px solid;   
+}
+
+.phone {
+    display: flex;
+    justify-content: flex-end; /* flexbox передвинули по горизонтали div с номером телефона максимально вправо */
+    height: 50px;
+    margin: 5px 0; /* внешние отсутпы сверху и снизу 5рх, а по бокам 0рх */
+}
+
+.phone span {                       /* обращение к тегу span через класс родительского тега*/
+    display: flex;
+    border:1px solid;
+    align-items: center;  /* поместили по центру по вертикали телефон внутри span*/
+    color: #427f9c;
+    font-size: 20px;
+    font-weight: bold;
+    background: rgba(255,255,255,0.9);   /* белый цвет в формате rgbaю где а - это прозрачность, в данном случае 0.9 */
+    border-radius: 100px;   /* скругление с обеих сторон. Можно задать в формате x y z d - и задать скругление с разным радиусом */
+    padding: 5px 15px; /* 5px - сверху и снизу, 15рх - побокам*/
+}
+
+.phone span:before {   /* создали элемент перед span, с иконкой и тенью.*/
+    content: "";
+    height: 30px;
+    width: 30px;
+    border: 1px solid #D7D7D7;
+    border-radius: 100%;
+    margin: 0 5px 0 0;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.3);  /* по Х не передвигали, по Y вниз на 1рх, толщина тени 1рх, черного цвета и прозрачность*/
+    background: url("../images/icon_phone.png") no-repeat center center #fff;
+    background-size: 70% 70%;
+}
+
+.content {
+    border: 1px solid;
+    height: 400px;
+}
+
+footer {
+    border: 1px solid;
+    height: 400px;
+}

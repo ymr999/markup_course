@@ -1,0 +1,43 @@
+/*@import url("tour_about.css");*/
+
+.div_1 {
+    display: inline-block; 
+    border: 1px solid; /* граница объекта*/
+    margin: 10px 20px 5px 15px; /*отступ сверху, справа, снизу, слева*/
+    padding: 20px; /*отступ внутри объекта*/
+    /*background: red;*/
+    background: url("rumiantsev.jpg") no-repeat center center;
+    height: 100px;
+    width: 300px;
+    position: relative; /* absolute и relative*/
+    top: 10px; /* размещение тега на странице*/
+    left: 200px; /* размещение тега на странице*/
+}
+
+.div_2 {
+    width: 50px;
+    height: 50px;
+    border: 1px solid;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
+
+.p1 {
+    border: 1px solid;
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+    text-indent: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: underline; /* подчеркнутый зачеркнутый и прочее*/
+    word-spacing: 15px;
+    letter-spacing: 5px;    
+}
+
+/*.span1 {
+    display: block;
+    border: 1px solid;
+    text-align: center;
+}*/
