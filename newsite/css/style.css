@@ -51,6 +51,27 @@ header {
     background-size: 70% 70%;
 }
 
+header nav {
+    background: linear-gradient(#4D96BB, #30667F); /*горизонтальный градиент указываем верхний увет, потом нижний*/
+}
+
+header nav ul {
+    display: flex;
+    justify-content:space-around; /*выравнивание по ширине страницы с одинаковым отступом*/
+    padding: 12px 0;
+}
+
+header nav ul li {
+    list-style-type: none;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6); /* тень текста как и выше для box*/
+}
+
+header nav ul li a { /* обращение к конкретным тегам указанием через все предыдущие элементы*/
+    color: white;
+    text-decoration: none;
+}
+
 .content {
     border: 1px solid;
     height: 400px;
