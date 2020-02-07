@@ -2,6 +2,10 @@
     margin:0;
 }
 
+.center {
+    text-align: center;
+}
+
 body {
     background: url("../images/bg.jpg") no-repeat center center/cover; /* Не повторяем картинку, центры по вертикали и горизонтали, cover - растянуть*/
     padding: 0;
@@ -69,7 +73,7 @@ header nav ul li {
 
 header nav ul li a { /* обращение к конкретным тегам указанием через все предыдущие элементы*/
     color: white;
-    text-decoration: none;
+    text-decoration: none; /* убрать подчеркивание в ссылках*/
 }
 
 .banner {
@@ -147,8 +151,111 @@ header nav ul li a { /* обращение к конкретным тегам у
 }
 
 .content {
+    display: flex; /* делаем раздел content элементом flexbox*/
+    justify-content: space-between; /* выравниваем элементы с отступом между ними, обы элемента будут "прилипать" к краям элемента content*/
+    padding-top: 5px;
+}
+
+.content .left {
+    flex-basis: 30%;   /* задание ширины в % для элемента flexbox*/
+    background: #fff;
+}
+
+.block_title {
+    padding: 12px 15px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.bg1 {                  /* заготовленые классы со стилями для фона заголовков*/
+    background: #59a1b7;
+}
+
+.bg2 {
+    background: #4a7d9a;
+}
+
+.bg3 {
+    background: #e6be18;
+}
+
+.bg4 {
+    background: #7d9519;
+}
+
+.left_menu {
+    list-style-type: none;
+    border: 1px solid #cdcdcd;
+    width: 80%;
+    padding: 0;
+    margin: 15px auto; /* отступ сверху и снизу по 15рх, а по бокам auto поставит по центру*/
+}
+
+.left_menu li a {
+    display: flex;       /* сделали ссылку flex элементом, чтобы можно было задавать высоту, ширину и двигать содержимое*/
+    text-decoration: none;
+    color: #2b566e;
+    font-size: 14px;
+    padding: 8px;
+    background: linear-gradient(#fff, #e1e7e9);
+    border-bottom: 1px solid #cdcdcd;
+    align-items: center;   /* выровнять содержимое flex элмента по центру*/
+}
+
+.left_menu li a:hover {          /* псевдо класс, при наведении курсора мыши на объект стилизует его как указано в правиле*/
+    background: linear-gradient(#e1e7e9, #fff); /* в даной ситуации: выделяет меню изменением цветов в linear-gradient*/
+}
+
+.left_menu li a:before {
+    content: "";
+    display: inline-block;  /* элемент будет иметь свойста строчно и блочного элементов*/
+    width: 22px;
+    height: 22px;
+    margin-right: 5px;
+    background: url("../images/menu_icon.png") no-repeat center center/cover;
+}
+
+.resorts {
+    display: flex;
+    width: 90%;
+    padding: 0;
+    list-style-type: none;
+    margin: 15px auto;
+    flex-wrap: wrap;  /* добавляем возможность переноса на новую строку элементов, которые не поместились по ширине */
+}                     /* почему так: ширина li = 47%, получаем 47+47=94% - третий не поместится и перенесется на строку ниже, и таким образом сформируются 2 колонки элементов*/ 
+
+.resorts li {
+    flex-basis: 47%;    /* ширина объекта li будет 47% от всей ширины объекта .resorts */
     border: 1px solid;
-    height: 400px;
+}
+
+.resorts li a {
+    color: #3a67e;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 5px;
+    display: flex;
+    align-items: center;
+}
+
+.resorts li a:before {
+    content: "";
+    display: inline-block;
+    width: 27px;
+    height: 18px;
+    border: 1px solid;
+    margin-right: 5px;
+    background: url("../images/flags.png") no-repeat;
+}
+
+
+
+
+
+.content .right {
+    flex-basis: 68.5%;
+    background: #fff;
 }
 
 footer {
