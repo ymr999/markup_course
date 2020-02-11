@@ -208,7 +208,7 @@ header nav ul li a { /* обращение к конкретным тегам у
 
 .left_menu li a:before {
     content: "";
-    display: inline-block;  /* элемент будет иметь свойста строчно и блочного элементов*/
+    display: inline-block;  /* элемент будет иметь свойста строчного и блочного элементов*/
     width: 22px;
     height: 22px;
     margin-right: 5px;
@@ -226,11 +226,10 @@ header nav ul li a { /* обращение к конкретным тегам у
 
 .resorts li {
     flex-basis: 47%;    /* ширина объекта li будет 47% от всей ширины объекта .resorts */
-    border: 1px solid;
-}
+    }
 
 .resorts li a {
-    color: #3a67e;
+    color: #3a667e;
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
@@ -248,6 +247,70 @@ header nav ul li a { /* обращение к конкретным тегам у
     margin-right: 5px;
     background: url("../images/flags.png") no-repeat;
 }
+
+.resorts .item1:before {            /* флаги для меню Курорты*/
+    background-position: -1px -1px;
+}
+
+.resorts .item2:before {
+    background-position: -1px -20px;
+}
+
+.resorts .item3:before {
+    background-position: -30px -20px;
+}
+
+.resorts .item4:before {
+    background-position: -1px -39px;
+}
+
+.resorts .item5:before {
+    background-position: -58px -39px;
+}
+
+.resorts .item6:before {
+    background-position: -86px -39px;
+}
+
+.resorts .item7:before {
+    background-position: -58px -58px;
+}
+
+.resorts .item8:before {
+    background-position: -58px -1px;
+}
+
+.resort_img {
+    height: 150px;
+    background: url("../images/resort.png") no-repeat center center/contain;
+    margin-bottom: 15px;
+}
+
+
+.promo {
+    padding: 0;
+    list-style-type: none;
+    width: 80%;
+    border: 1px solid #6ea7c6;
+    margin: 10px auto;
+    border-bottom: none;
+}
+
+.promo a {
+    color: #3a667e;
+    text-decoration: none;
+    display: block;
+    padding: 10px 5px;
+    font-size: 12px;
+    border-bottom: 1px solid #6ea7c6;
+}
+
+.promo li:nth-child(odd) {  /*nth-child позволяет обратиться к дочерним элементам внутри какого-то элемента, в данном сулчае <ul> с классом promo сщдержит ссылки */
+    background: #FFF5F5;    /* (odd) - каждый нечетный элемент, (even) - каждый четный элемент, first-child - первый элемент из списка дочерних, last-child - последний элемент из списка дочерних*/   
+}
+
+
+
 
 
 
