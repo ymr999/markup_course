@@ -20,10 +20,6 @@ body {
     margin: 0 auto; /*внешние поля сверху и снизу 0, а побокам auto. Container стал посредине*/
 }
 
-header {
-    border: 1px solid;   
-}
-
 .phone {
     display: flex;
     justify-content: flex-end; /* flexbox передвинули по горизонтали div с номером телефона максимально вправо */
@@ -33,7 +29,6 @@ header {
 
 .phone span {                       /* обращение к тегу span через класс родительского тега*/
     display: flex;    /*подключение flexbox*/
-    border:1px solid;
     align-items: center;  /* поместили по центру по вертикали телефон внутри span*/
     color: #427f9c;
     font-size: 20px;
@@ -78,7 +73,6 @@ header nav ul li a { /* обращение к конкретным тегам у
 
 .banner {
     position: relative; /* позиция относительно body*/
-    border: 1px solid red;   
     height: 378px;
     background: url("../images/banner.jpg") no-repeat center center/cover; /* расположить кратинку в DIV поцентру горизонтально и вертикально, растянуть на весь размер div*/
 }
