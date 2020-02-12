@@ -14,8 +14,6 @@ body {
 }
 
 .container {
-    border:1px solid;
-    height: 1200px;
     width: 1080px;
     margin: 0 auto; /*внешние поля сверху и снизу 0, а побокам auto. Container стал посредине*/
 }
@@ -309,19 +307,82 @@ header nav ul li a { /* обращение к конкретным тегам у
     background: #FFF5F5;    /* (odd) - каждый нечетный элемент, (even) - каждый четный элемент, first-child - первый элемент из списка дочерних, last-child - последний элемент из списка дочерних*/   
 }
 
-
-
-
-
-
-
-
 .content .right {
     flex-basis: 68.5%;
     background: #fff;
 }
 
+.tours_block {          /* родительский flex элемент, в котром находятся ссылки с классом tours_block-item_wrap */
+    display: flex;
+    flex-wrap: wrap;    /* включили разрешение переноса элементов на след.строку, если не помещается. Т.к. 1элемент 32,9%, то 3 * 32,9 = 99%, т.е.в строке будет максимум 2 элемента, остальные перейдут на след строку и т.д */
+    padding:  5px;
+    justify-content: space-between; /* равномерное растягивание элементов по ширине с одинаковыми отступами между элементами */
+}
+
+.tours_block-item_wrap {
+    text-decoration: none;
+    border: 1px solid #CAC7C7;
+    flex-basis: 32.9%;      /* задание ширины дочернего flex элемента относительно родительского элемента flex */
+    padding: 5px;
+    box-sizing: border-box; /* опция не повлияет на ширину элементов после добавления padding в предыдущем шаге */
+    margin-bottom: 4px;
+}
+
+.tours_block-item_wrap:hover {
+    background: #EEEEEE;
+}
+
+.tours_block-item_wrap .item1 {background: url("../images/autobus/chezh.jpg") no-repeat;}
+.tours_block-item_wrap .item2 {background: url("../images/autobus/france.jpg") no-repeat;}
+.tours_block-item_wrap .item3 {background: url("../images/autobus/grecia.jpg") no-repeat;}
+.tours_block-item_wrap .item4 {background: url("../images/autobus/italy.jpg") no-repeat;}
+.tours_block-item_wrap .item5 {background: url("../images/autobus/roma.jpg") no-repeat;}
+.tours_block-item_wrap .item6 {background: url("../images/autobus/spain.jpg") no-repeat;}
+
+.tours_block-item_wrap .item7 {background: url("../images/avia/bali.jpg") no-repeat;}
+.tours_block-item_wrap .item8 {background: url("../images/avia/bulg.jpg") no-repeat;}
+.tours_block-item_wrap .item9 {background: url("../images/avia/ingland.jpg") no-repeat;}
+.tours_block-item_wrap .item10 {background: url("../images/avia/taiti.jpg") no-repeat;}
+.tours_block-item_wrap .item11 {background: url("../images/avia/thai.jpg") no-repeat;}
+.tours_block-item_wrap .item12 {background: url("../images/avia/turkey.jpg") no-repeat;}
+
+.tours_block-item_wrap .item13 {background: url("../images/articles/article_1.jpg") no-repeat;}
+.tours_block-item_wrap .item14 {background: url("../images/articles/article_2.jpg") no-repeat;}
+.tours_block-item_wrap .item15 {background: url("../images/articles/article_3.jpg") no-repeat;}
+
+.tours_block .img {     /* последовательность прописаных правил важна, т.к. если прописать обному элементу несколько правил, то сработает последнее прописанное */
+    height: 150px;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+.tours_block-item_wrap .img .price {
+    width: 60%;
+    background: rgba(255,255,255,0.8);
+    border-radius: 0 5px 5px 0;      /* закругление углов границ по часовой стрелке: верхний левый -0, верхний правый -5рх, нижний правый -5рх, нижний левый -0рх */
+    color: #D71717;
+    font-weight: bold;
+    padding: 5px;
+    position: absolute;
+    bottom: 20px;
+}
+
+.tours_block-item_wrap p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #3a667e;
+    margin: 10px 0;     /* отступы снаружи 10рх сверху/снизу и побокам(слева/справа) 0рх */
+}
+
+.tours_block-item_wrap span {
+    font-size: 12px;
+    color: #000;
+}
+
 footer {
-    border: 1px solid;
-    height: 400px;
+    background: #40819d;
+    color: #fff;
+    padding: 20px;
+    font-size: 14px;
 }
