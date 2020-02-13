@@ -9,14 +9,15 @@
 
 .tours_about table {
     margin: 20px 0;     /* отступ от внешних элементов 20рх сверху и снизу, по бокам 0рх*/
-    width: 80%;
+    width: 80%;         /* 80% от всей ширины блока right*/
     border: 1px solid #dcdcdc;
-    border-collapse: collapse;      /* сомкнет видимые границф таблицы и отдельных €чеек */
+    border-collapse: collapse;      /* сомкнет видимые границы таблицы и отдельных €чеек, чтобы не получилось двойных отделений */
 }
 
 .tours_about table th, .tours_about table td {      /*через зап€тую перечислены тэги к которым надо применить правило css */
     border: 1px solid #dcdcdc;
     padding: 10px;
+    text-align: center;
 }
 
 .tours_about p {
@@ -32,23 +33,23 @@
 }
 
 .tours_about form {
-    display: flex;
-    flex-direction: column;
+    display: flex;              /* сделали форму flex элементом*/
+    flex-direction: column;     /* направление, в котором элементы будут выстроены. Ќапример: row | row-reverse | column | column-reverse */
     width: 60%;
 }
 
 .tours_about form input, .tours_about form textarea {
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 5px;         /*скругление границ полей ввода*/
     border: 1px solid #dcdcdc;
     margin: 5px 0;
-    outline: none;
+    outline: none;              /* отмена выделени€ браузером, при тапе на пол€х ввода */
 }
 
 .tours_about form textarea {
     height: 100px;
-    //resize: none;
-    min-height: 100px;
+    //resize: none;             /* запрет изменени€ размера пол€ ввода */
+    min-height: 100px;          /* задание минимальных и максимальных размеров пол€ ввода, при этом размеры в этих пределах можно мен€ть на странице */
     max-height: 200px;
     max-width: 500px;
 }
