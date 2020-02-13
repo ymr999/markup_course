@@ -1,0 +1,22 @@
+/*1097 и 980рх*/
+@media(max-width:1097px) {      /* при ширине окна браузера 1097рх и меньше будет применяться правило из медиа запроса*/
+    .container {
+        width: 100%;
+    }
+}
+
+@media(max-width:980px) {       
+    .tours_about table {
+        width: 100%;
+    }
+}
+
+@media(max-width:980px) {
+    .tour_gallery a img {
+        width:30%!important;    /* делает правило помеченное так, главынм и отменяет все любые правила для этих элементов*/
+    }
+    .tours_about form {
+        width:100%;
+    }
+}
+
