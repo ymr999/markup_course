@@ -45,7 +45,7 @@
         display: none;
     } 
         
-    header label {
+    header label, .left label {
         font-size: 30px;
         color: #fff;
         border: 1px solid;
@@ -53,17 +53,31 @@
         cursor: pointer;        /* при наведении на элемент курсор мышки меняется на указательный  палец*/
         padding: 0 7px 3px;        /* сверху 0, по бокам 7рх, снизу 3рх */
         position: absolute;
-        left: 10px;
-        top: 5px;
         z-index: 2;              /* задание слоя, на котором будет элемент, т.е. кнопка меню будет выше всех по слоям. По умолчанию все элементы на 1м уровне */
     }
     
+    label[for="top_toggle"] {
+        left: 10px;
+        top: 5px;
+    }
+    
+    label[for="left_toggle"] {
+        right: 10px;
+        top: 5px;
+        z-index: 4;
+    }
+    
     header #top_toggle:checked ~ nav {        /* обращение к элементу по его id.  */
-        margin-left: 0;                     /* Checked - это значит что правило применится только если чекбокс выбран*/
+        margin-left: 0;
+                             /* Checked - это значит что правило применится только если чекбокс выбран*/
                                             /* дословно: если чекбокс с id="top_toggle" выбран, то меню nav будет опять показано*/
     }
     
     header input[type="checkbox"], .left input[type="checkbox"] {       /* скрыли оба чекбокса*/
+        display: none;
+    }
+    
+    header input[type="checkbox"] {
         display: none;
     }
     
@@ -92,5 +106,72 @@
         display: block;
         padding: 20px 0;    /* отступ внутри элемента от краев сверху/снизу по 20рх и побокам 0 */ 
         text-align: center;
+    }
+    
+    .left nav {
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        width: 100%;
+        background: #E1E7E9;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        margin-top: -100vh;
+    }
+    
+     #left_toggle:checked ~ nav {        /* обращение к элементу по его id.  */
+        margin-top: 0;                     /* Checked - это значит что правило применится только если чекбокс выбран*/
+                                            /* дословно: если чекбокс с id="top_toggle" выбран, то меню nav будет опять показано*/
+    }
+    
+    .left_menu {
+        flex-basis: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        border:none;
+    }
+    
+    .left_menu li {
+        flex-basis: 100%;
+    }
+    
+    .left_menu li a {
+        padding: 0 10px;        /* внутренние отступы внутри элемента а сверхку/снизу - 0, по бокам - 10рх */
+        height: 100%;
+        background: #F3F8FA;
+    }
+}
+
+@media (max-width: 600px) {
+    .tours_block-item_wrap {
+        flex-basis: 49.5%;      /* теперь при ширине экрана браузера 600рх, в строке с турами будет помещаться автоматически только 2 тура */
+    }
+}
+
+@media (max-width: 500px) {
+    .banner .text {
+        width: 90%;
+        font-size: 12px;
+        line-height: 16px;        /* уменьшили межстрочное расстояние в тексте баннера*/
+    }
+    .tours_block-item_wrap {
+        flex-basis: 100%;      /* теперь при ширине экрана браузера 600рх, в строке с турами будет помещаться автоматически только 1 тур */
+    }
+    .tours_block .img {
+        height: 250px;
+    }
+    .search .icons {
+        display: none;
+    }
+    .search form {
+        width: 100%;
+    }
+    .search form input {
+        width: 75%;
+    }
+     .search form button {
+        width: 20%;
     }
 }
