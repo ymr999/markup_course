@@ -9,7 +9,12 @@
 }
 
 body {
-    background: url("../images/bg.jpg") no-repeat center center/cover; /* Не повторяем картинку, центры по вертикали и горизонтали, cover - растянуть*/
+    background: fixed;
+    background-image: url("../images/bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    /*background: url("../images/bg.jpg") no-repeat center center/cover;*/ /* Не повторяем картинку, центры по вертикали и горизонтали, cover - растянуть*/
     padding: 0;
     margin: 0;
     font-family: Arial;
@@ -299,7 +304,7 @@ header nav ul li a { /* обращение к конкретным тегам у
     border-bottom: 1px solid #6ea7c6;
 }
 
-.promo li:nth-child(odd) {  /*nth-child позволяет обратиться к дочерним элементам внутри какого-то элемента, в данном сулчае <ul> с классом promo сщдержит ссылки */
+.promo li:nth-child(odd) {  /*nth-child позволяет обратиться к дочерним элементам внутри какого-то элемента, в данном сулчае <ul> с классом promo сjдержит ссылки */
     background: #FFF5F5;    /* (odd) - каждый нечетный элемент, (even) - каждый четный элемент, first-child - первый элемент из списка дочерних, last-child - последний элемент из списка дочерних*/   
 }
 

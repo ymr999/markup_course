@@ -73,6 +73,12 @@
                                             /* дословно: если чекбокс с id="top_toggle" выбран, то меню nav будет опять показано*/
     }
     
+      header #top_toggle:checked ~ label[for="left_toggle"] {        /* обращение к элементу по его id.  */
+        display: none;
+                             /* Checked - это значит что правило применится только если чекбокс выбран*/
+                                            /* дословно: если чекбокс с id="top_toggle" выбран, то меню nav будет опять показано*/
+    }
+    
     header input[type="checkbox"], .left input[type="checkbox"] {       /* скрыли оба чекбокса*/
         display: none;
     }
@@ -126,10 +132,10 @@
     }
     
     .left_menu {
-        flex-basis: 100%;
+        flex-basis: 100%;       /* задание минимального размера */
         height: 80%;
         display: flex;
-        flex-direction: column;
+        flex-direction: column;     /* flex-flow: row wrap; аналогично 2м сторокам:flex-direction: row; flex-wrap: wrap; */
         border:none;
     }
     
